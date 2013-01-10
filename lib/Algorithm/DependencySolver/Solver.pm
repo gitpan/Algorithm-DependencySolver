@@ -1,4 +1,7 @@
 package Algorithm::DependencySolver::Solver;
+{
+  $Algorithm::DependencySolver::Solver::VERSION = '0.02';
+}
 
 use Moose;
 use MooseX::FollowPBP;
@@ -14,6 +17,10 @@ use Graph::Convert;
 =head1 NAME
 
 Algorithm::DependencySolver - A dependency solver for scheduling access to a shared resource
+
+=head1 VERSION
+
+version 0.02
 
 =head1 SYNOPSIS
 

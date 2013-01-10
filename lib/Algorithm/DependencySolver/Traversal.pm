@@ -1,4 +1,7 @@
 package Algorithm::DependencySolver::Traversal;
+{
+  $Algorithm::DependencySolver::Traversal::VERSION = '0.02';
+}
 
 use Moose;
 use MooseX::FollowPBP;
@@ -11,6 +14,10 @@ use Data::Dumper;
 =head1 NAME
 
 Algorithm::DependencySolver::Traversal - A module for traversing a dependency graph
+
+=head1 VERSION
+
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -168,4 +175,3 @@ method run() {
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
-

@@ -1,10 +1,17 @@
 package Algorithm::DependencySolver::Operation;
+{
+  $Algorithm::DependencySolver::Operation::VERSION = '0.02';
+}
 
 use Moose;
 
 =head1 NAME
 
 Algorithm::DependencySolver::Operation - An operation representation
+
+=head1 VERSION
+
+version 0.02
 
 =head1 SYNOPSIS
 

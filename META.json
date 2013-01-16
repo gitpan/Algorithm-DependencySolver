@@ -39,7 +39,11 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "File::Spec::Functions" : "3.00",
+            "File::Type" : "0.22",
+            "File::Which" : "1.09",
+            "Test::More" : "0.98",
+            "Test::TempDir" : "0.05"
          }
       }
    },
@@ -51,6 +55,6 @@
          "web" : "http://github.com/kaoru/Algorithm-DependencySolver"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }
 

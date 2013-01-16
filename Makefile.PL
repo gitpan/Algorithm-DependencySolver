@@ -12,7 +12,11 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Algorithm::DependencySolver - A dependency solver for scheduling access to a shared resource",
   "AUTHOR" => "Colin Horne",
   "BUILD_REQUIRES" => {
-    "Test::More" => "0.98"
+    "File::Spec::Functions" => "3.00",
+    "File::Type" => "0.22",
+    "File::Which" => "1.09",
+    "Test::More" => "0.98",
+    "Test::TempDir" => "0.05"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -32,7 +36,7 @@ my %WriteMakefileArgs = (
     "MooseX::FollowPBP" => "0.05",
     "MooseX::Method::Signatures" => "0.44"
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }

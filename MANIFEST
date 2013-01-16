@@ -10,4 +10,6 @@ lib/Algorithm/DependencySolver/Operation.pm
 lib/Algorithm/DependencySolver/Solver.pm
 lib/Algorithm/DependencySolver/Traversal.pm
 t/00-compile.t
+t/01-operation.t
+t/02-solver.t
 t/release-pod-syntax.t

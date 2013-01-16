@@ -1,6 +1,6 @@
 package Algorithm::DependencySolver::Solver;
 {
-  $Algorithm::DependencySolver::Solver::VERSION = '0.02';
+  $Algorithm::DependencySolver::Solver::VERSION = '0.03';
 }
 
 use Moose;
@@ -20,7 +20,7 @@ Algorithm::DependencySolver - A dependency solver for scheduling access to a sha
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -50,7 +50,7 @@ version 0.02
     );
 
     my $solver =
-        Algorithm::DependencySolver::Solver->new(operations => \@operations);
+        Algorithm::DependencySolver::Solver->new(nodes => \@operations);
 
     $solver->to_png("pretty-graph.png");
 
@@ -403,7 +403,7 @@ in PNG format
 
 method to_png($file) {
     die "Only sane file names, please (you gave: $file)" unless
-      $file =~ m/^[a-z0-9_\-\.\/]+$/;
+      $file =~ m/^[a-z0-9_\-\.\/]+$/i;
     open my $dot, "|dot -Tpng -o'$file'" or die ("Cannot open pipe to dot (-o $file): $!");
     print $dot $self->get_GraphEasy->as_graphviz;
 }
@@ -420,7 +420,7 @@ in Graphviz's dot format
 
 method to_dot($file) {
     die "Only sane file names, please (you gave: $file)" unless
-      $file =~ m/^[a-z0-9_\-\.\/]+$/;
+      $file =~ m/^[a-z0-9_\-\.\/]+$/i;
     open my $fh, ">", $file or die ("Cannot open to $file: $!");
     print $fh $self->get_GraphEasy->as_graphviz;
 }

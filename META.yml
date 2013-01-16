@@ -3,7 +3,11 @@ abstract: 'Algorithm::DependencySolver - A dependency solver for scheduling acce
 author:
   - 'Colin Horne'
 build_requires:
+  File::Spec::Functions: 3.00
+  File::Type: 0.22
+  File::Which: 1.09
   Test::More: 0.98
+  Test::TempDir: 0.05
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -25,4 +29,4 @@ requires:
   MooseX::Method::Signatures: 0.44
 resources:
   repository: git://github.com/kaoru/Algorithm-DependencySolver
-version: 0.02
+version: 0.03

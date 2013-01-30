@@ -10,11 +10,13 @@ use ExtUtils::MakeMaker 6.30;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Algorithm::DependencySolver - A dependency solver for scheduling access to a shared resource",
-  "AUTHOR" => "Colin Horne",
+  "AUTHOR" => "Code by Colin Horne, Tests by Alex Balhatchet",
   "BUILD_REQUIRES" => {
     "File::Spec::Functions" => "3.00",
     "File::Type" => "0.22",
     "File::Which" => "1.09",
+    "Test::Deep" => "0.110",
+    "Test::Exception" => "0.31",
     "Test::More" => "0.98",
     "Test::TempDir" => "0.05"
   },
@@ -36,7 +38,7 @@ my %WriteMakefileArgs = (
     "MooseX::FollowPBP" => "0.05",
     "MooseX::Method::Signatures" => "0.44"
   },
-  "VERSION" => "0.03",
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }

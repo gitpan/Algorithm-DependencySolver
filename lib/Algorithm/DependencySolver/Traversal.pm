@@ -1,6 +1,6 @@
 package Algorithm::DependencySolver::Traversal;
 {
-  $Algorithm::DependencySolver::Traversal::VERSION = '0.03';
+  $Algorithm::DependencySolver::Traversal::VERSION = '0.04';
 }
 
 use Moose;
@@ -17,7 +17,7 @@ Algorithm::DependencySolver::Traversal - A module for traversing a dependency gr
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -71,9 +71,9 @@ has 'visited' => (
 );
 
 has 'visit' => (
-    is       => 'ro',
+    is       => 'rw',
     isa      => 'CodeRef',
-    required => 1,
+    default  => sub { sub { 1 } },
 );
 
 has 'choose' => (

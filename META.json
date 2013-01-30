@@ -1,10 +1,10 @@
 {
    "abstract" : "Algorithm::DependencySolver - A dependency solver for scheduling access to a shared resource",
    "author" : [
-      "Colin Horne"
+      "Code by Colin Horne, Tests by Alex Balhatchet"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -42,6 +42,8 @@
             "File::Spec::Functions" : "3.00",
             "File::Type" : "0.22",
             "File::Which" : "1.09",
+            "Test::Deep" : "0.110",
+            "Test::Exception" : "0.31",
             "Test::More" : "0.98",
             "Test::TempDir" : "0.05"
          }
@@ -55,6 +57,6 @@
          "web" : "http://github.com/kaoru/Algorithm-DependencySolver"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
 

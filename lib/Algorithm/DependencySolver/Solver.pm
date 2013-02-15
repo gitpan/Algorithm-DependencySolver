@@ -1,6 +1,6 @@
 package Algorithm::DependencySolver::Solver;
 {
-  $Algorithm::DependencySolver::Solver::VERSION = '0.04';
+  $Algorithm::DependencySolver::Solver::VERSION = '0.05';
 }
 
 use Moose;
@@ -8,6 +8,7 @@ use MooseX::FollowPBP;
 use MooseX::Method::Signatures;
 
 use List::Compare;
+use List::MoreUtils qw(any);
 
 use Graph::Directed;
 use Graph::Easy;
@@ -20,7 +21,7 @@ Algorithm::DependencySolver - A dependency solver for scheduling access to a sha
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -366,7 +367,7 @@ method _remove_redundancy($G) {
             my $other_paths_to_pred = grep {
                 # Returns true only if the edge from $pred to $node can
                 # safely be removed
-                $pred ~~ [$G->all_predecessors($_)]
+                any { $_ eq $pred } $G->all_predecessors($_);
             } @other_predecessors;
 
             if ($other_paths_to_pred) {

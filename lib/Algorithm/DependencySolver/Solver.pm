@@ -1,6 +1,6 @@
 package Algorithm::DependencySolver::Solver;
 {
-  $Algorithm::DependencySolver::Solver::VERSION = '0.05';
+  $Algorithm::DependencySolver::Solver::VERSION = '0.06';
 }
 
 use Moose;
@@ -21,7 +21,7 @@ Algorithm::DependencySolver - A dependency solver for scheduling access to a sha
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -95,13 +95,13 @@ L<Algorithm::DependencySolver::Operation::prerequisites>.
 
 has 'nodes' => (
     is       => 'ro',
-#    isa      => 'ArrayRef[Operation]',
+#   isa      => 'ArrayRef[Operation]',
     required => 1,
 );
 
 has 'nodes_index' => (
     is       => 'ro',
-#    isa      => 'HashRef[Operation]',
+#   isa      => 'HashRef[Operation]',
     builder  => 'build_nodes_index',
     lazy     => 1,
     init_arg => undef,
@@ -184,7 +184,7 @@ method build_Graph() {
     my $G = Graph::Directed->new(
         vertices    => \@vertices,
         edges       => \@edges,
-#        refvertexed => 1,  # refvertexed is broken!
+#       refvertexed => 1,  # refvertexed is broken!
     );
 
     # Note: Graph::Traversal has a bug in it where noderefs are

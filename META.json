@@ -4,7 +4,7 @@
       "Code by Colin Horne, Tests by Alex Balhatchet"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -53,10 +53,10 @@
    "resources" : {
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/kaoru/Algorithm-DependencySolver",
-         "web" : "http://github.com/kaoru/Algorithm-DependencySolver"
+         "url" : "git://github.com/lokku/Algorithm-DependencySolver",
+         "web" : "http://github.com/lokku/Algorithm-DependencySolver"
       }
    },
-   "version" : "0.05"
+   "version" : "0.06"
 }
 
